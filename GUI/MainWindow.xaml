@@ -4,25 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI" 
-        xmlns:components="clr-namespace:GUI.Views.Components"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900" MouseLeftButtonDown="Drag_Form"
-        WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Black"  Foreground="White">
+        Title="MainWindow" Height="500" Width="900"  
+        WindowStartupLocation="CenterScreen" >
 
-    <WindowChrome.WindowChrome>
-        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
-    </WindowChrome.WindowChrome>
+ 
     
     
     <Grid>
         <!-- Grid Definition -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
             <RowDefinition/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
         <!-- Grid Content -->
-        <components:TitleBar/>
+
+        <Canvas x:Name="canvas" Grid.Row="0" Background="White" Margin="20"/>
+
+        <Button Content="Draw Graph"  Grid.Row="1" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Width="100"/>
 
     </Grid>
 
