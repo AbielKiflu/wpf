@@ -5,55 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="500" Width="900" MouseLeftButtonDown="Drag_Form"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Black"  Foreground="White">
 
-    <Window.Resources>
-        <Style x:Key="GridStyle" TargetType="Grid">
-            <Setter Property="Background" Value="White" />
-            <Setter Property="Margin" Value="10" />
-        </Style>
-        
-        
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="Lavender" />
-            <Setter Property="Margin" Value="10" />
-            <Setter Property="Foreground" Value="Black" />
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="Black" />
-                    <Setter Property="Foreground" Value="Lavender" />
-                </Trigger>
-            </Style.Triggers>
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+    
+    
+    <Grid>
+        <!-- Grid Definition -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-        </Style>
-    </Window.Resources>
+        <!-- Grid Content -->
+        <Rectangle Grid.Row="0" Fill="Lavender" />
 
-
-    <Grid Style="{StaticResource GridStyle}">
-
- 
- 
+    </Grid>
 
    
 
-        <Grid.RowDefinitions >
-            <RowDefinition Height="50" />
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"
-                VerticalAlignment="Center" Content="First" Click="button_Click"  Height="40" Width="80" 
-                  />
 
-        <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center"
-                VerticalAlignment="Center" Content="Second" Click="button_Click"  Height="40" Width="80"
-                 />
-
-    </Grid>
 </Window>

@@ -24,13 +24,11 @@ namespace GUI
         {
             InitializeComponent();
         }
+ 
 
-        void button_Click(object sender, RoutedEventArgs e)
+        private void Drag_Form(object sender, MouseButtonEventArgs e)
         {
-            // Show message box when button is clicked.
-            MessageBox.Show("Hello, Windows Presentation Foundation!");
+            DragMove();
         }
-
-
     }
 }
