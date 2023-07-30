@@ -18,9 +18,9 @@ namespace GUI.Views.Components
     /// <summary>
     /// Interaction logic for TitleBar.xaml
     /// </summary>
-    public partial class TitleBar : UserControl
+    public partial class BarGraph : UserControl
     {
-        public TitleBar()
+        public BarGraph()
         {
             InitializeComponent();
         }

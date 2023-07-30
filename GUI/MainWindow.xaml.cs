@@ -29,45 +29,7 @@ namespace GUI
 
  
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-         
-            canvas.Children.Clear();
-
-             
-            double graphWidth = 400;
-            double graphHeight = 300;
-
-            
-            int maxValue = 0;
-            foreach (int dataPoint in dataPoints)
-            {
-                if (dataPoint > maxValue)
-                    maxValue = dataPoint;
-            }
-
-             
-            double barWidth = graphWidth / dataPoints.Length;
-
-           
-            for (int i = 0; i < dataPoints.Length; i++)
-            {
-                double barHeight = dataPoints[i] * graphHeight / maxValue;
-
-                Rectangle bar = new Rectangle
-                {
-                    Width = barWidth,
-                    Height = barHeight,
-                    Fill = Brushes.Blue
-                };
-
-                Canvas.SetLeft(bar, i * barWidth);
-                Canvas.SetTop(bar, graphHeight - barHeight);
-
-                canvas.Children.Add(bar);
-            }
-        }
-
+  
 
 
     }
