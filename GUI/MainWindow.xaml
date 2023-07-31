@@ -28,7 +28,7 @@
 
             <StackPanel Grid.Column="0" >
                 <Label Content="Settings" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <ucontrol:UserInput  LabelText="First Name" TextValue="Abiel Kiflu" />
+                <ucontrol:UserInput x:Name="lstPort"  LabelText="First Name" ButtonClicked="Button_Clicked" />
                 
             </StackPanel>
 
