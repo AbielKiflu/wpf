@@ -34,14 +34,14 @@
 
 
             <StackPanel Grid.Column="1" >
-                <ProgressBar Height="24" Width="220"  Margin="5"/>
-                <ProgressBar Height="24" Width="220"  Margin="5"/>
+                <Button x:Name="btnParse" Click="Button_Clicked" Margin="10" Height="40" Width="100" Content="Parse"/>
             </StackPanel>
  
         </Grid>
 
 
-        <ucontrol:BarGraph Grid.Row="1"/>
+        <Canvas Grid.Row="1" x:Name="cvsModel" Background="WhiteSmoke"/>
+        <!-- <ucontrol:BarGraph Grid.Row="1"/> -->
 
     </Grid>
 
