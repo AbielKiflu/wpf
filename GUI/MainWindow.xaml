@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI" 
+        xmlns:ucontrol="clr-namespace:GUI.Views.Components"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="900"  
         WindowStartupLocation="CenterScreen" >
@@ -14,15 +15,33 @@
     <Grid>
         <!-- Grid Definition -->
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.6*"/>
         </Grid.RowDefinitions>
 
         <!-- Grid Content -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-        <Canvas x:Name="canvas" Grid.Row="0" Background="White" Margin="20"/>
+            <StackPanel Grid.Column="0" >
+                <Label Content="Settings" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <ucontrol:UserInput x:Name="lstPort"  LabelText="First Name" ButtonClicked="Button_Clicked" />
+                
+            </StackPanel>
 
-        <Button Content="Draw Graph"  Grid.Row="1" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Width="100"/>
+
+            <StackPanel Grid.Column="1" >
+                <Button x:Name="btnParse" Click="Button_Clicked" Margin="10" Height="40" Width="100" Content="Parse"/>
+            </StackPanel>
+ 
+        </Grid>
+
+
+        <Canvas Grid.Row="1" x:Name="cvsModel" Background="WhiteSmoke"/>
+        <!-- <ucontrol:BarGraph Grid.Row="1"/> -->
 
     </Grid>
 
