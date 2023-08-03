@@ -1,4 +1,5 @@
-﻿using GUI.Views.Components;
+﻿using GUI.FileHandler;
+using GUI.Views.Components;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+ 
 
 namespace GUI
 {
@@ -32,8 +34,16 @@ namespace GUI
  
         protected void Button_Clicked(object sender, RoutedEventArgs e)
         {
-           
- 
+            //Openfile dialog
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            //MessageBox.Show(File.Exists(System.IO.Path.Combine(baseDirectory, "assets", "cube.stl")).ToString());
+            string filePath = System.IO.Path.Combine(baseDirectory, "assets", "cube.stl");
+            STLFileReader sTLFileReader = new STLFileReader();
+            sTLFileReader.ReadFile(filePath);
+
+
+
+
         }
 
 
