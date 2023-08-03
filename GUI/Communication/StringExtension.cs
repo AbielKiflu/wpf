@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GUI
+namespace GUI.Communication
 {
     public static class StringExtension
     {
@@ -38,6 +38,6 @@ namespace GUI
                 }
             }
             return -1;
-        } 
+        }
     }
 }
